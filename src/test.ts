@@ -1,0 +1,3 @@
+import { getBlockInfo } from ".";
+
+getBlockInfo()

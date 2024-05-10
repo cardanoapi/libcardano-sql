@@ -12,7 +12,9 @@
     "prisma": "^4.15.0"
   },
   "scripts": {
-    "start": "ts-node src/index.ts"
+    "start": "ts-node src/index.ts",
+    "cardano-node": "ts-node src/cardano-node.ts",
+    "test": "ts-node src/test.ts"
   },
   "devDependencies": {
     "@types/node": "^20.2.3",
