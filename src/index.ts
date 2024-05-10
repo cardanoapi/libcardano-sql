@@ -156,7 +156,6 @@ async function writeToDatabase(blockNo: number, hash: Buffer, slotNo: number) {
             }
         });
     } catch (error) {
-        console.log("duplicate detected...");
         if (error instanceof PrismaClientKnownRequestError) {
             return;
         }
