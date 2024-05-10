@@ -1,1 +1,3 @@
 node_modules/
+blockchain.sqlite3
+blockchain.sqlite3-journal

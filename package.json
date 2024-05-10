@@ -1,23 +1,23 @@
 {
-    "name": "libcardano-sql",
-    "version": "0.0.1",
-    "description": "",
-    "main": "src/index.ts",
-    "author": "Reeshav Acharya",
-    "license": "ISC",
-    "dependencies": {
-      "fs": "^0.0.1-security",
-      "@prisma/client": "4.15.0",
-      "prisma": "^4.15.0",
-      "libcardano": "^0.0.6"
-    },
-    "scripts": {
-      "start": "ts-node src/index.ts"
-    },
-    "devDependencies": {
-      "@types/node": "^20.2.3",
-      "ts-node": "^10.9.2",
-      "typescript": "^5.0.4"
-    }
+  "name": "libcardano-sql",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/index.ts",
+  "author": "Reeshav Acharya",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "4.15.0",
+    "fs": "^0.0.1-security",
+    "kafka-node": "^5.0.0",
+    "libcardano": "^0.0.6",
+    "prisma": "^4.15.0"
+  },
+  "scripts": {
+    "start": "ts-node src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.0.4"
   }
-  
+}
