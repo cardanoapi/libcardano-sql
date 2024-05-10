@@ -8,7 +8,6 @@
   "dependencies": {
     "@prisma/client": "4.15.0",
     "fs": "^0.0.1-security",
-    "kafka-node": "^5.0.0",
     "libcardano": "^0.0.6",
     "prisma": "^4.15.0"
   },
