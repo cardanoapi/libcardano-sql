@@ -1,5 +1,5 @@
-import { Kafka } from 'libcardano-kafka/src/kafka'
-import { install_kafka_subscriber } from 'libcardano-kafka/src/index'
+import { Kafka } from 'libcardano-kafka/kafka'
+import { install_kafka_subscriber } from 'libcardano-kafka/index'
 import { InmemoryBlockchain } from 'libcardano/src/InmemoryBlockchain'
 import { NodePeer } from 'libcardano/src/network'
 import { getBlockInfo, install_db_subscriber } from '.'
@@ -26,8 +26,6 @@ install_db_subscriber(blockchain).then(() => {
                     startServer()
                     blockchain.unsubscribe("extendBlock", listening)
                 }
-
-
                 blockchain.on("extendBlock", listening)
                 const txSubmissionChannel = peer.createProtocolChannel(4)!
                 TxSubmission.initiate(txSubmissionChannel)

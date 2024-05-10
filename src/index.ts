@@ -2,7 +2,7 @@ import {Blockchain, ChainPoint, ChainTip} from 'libcardano/src/types';
 import {PrismaClientKnownRequestError} from "@prisma/client/runtime/library";
 import { PrismaClient } from '@prisma/client'
 import cbor from 'libcardano/lib/cbor';
-import { Kafka } from 'libcardano-kafka/src/kafka';
+import { Kafka } from 'libcardano-kafka/kafka'
 const prisma = new PrismaClient()
 let isExiting = false;
 const k = new Kafka(["kafka.sireto.dev:9092"], 'blockchain')
@@ -132,7 +132,7 @@ export async function install_db_subscriber(blockchain: Blockchain){
 }
 
 export async function getBlockInfo() {
-    console.log("Writing from kafka to database...")
+    console.log("Writing to database...")
     return new Promise((resolve, reject) => {
         k.consumer.on('message', (message) => {
             if (message.value instanceof Buffer) {

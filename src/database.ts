@@ -1,4 +1,9 @@
-// database
+import { execSync } from "child_process";
+import { writeFileSync } from "fs";
+
+export function generateSchema() {
+    execSync(`touch schema.prisma`)
+    const schema = `// database
     datasource db {
       provider = "sqlite"
       url      = "file:./blockchain.sqlite3"
@@ -37,4 +42,10 @@
       kafkaBlockNo    Int
       kafkaSlotNo     Int
     }
-    
+    `
+    writeFileSync('schema.prisma', schema)
+    execSync(`npx prisma generate`)
+    execSync(`npx prisma migrate dev`)
+}
+
+generateSchema()

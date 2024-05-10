@@ -14,7 +14,8 @@
   "scripts": {
     "start": "ts-node src/index.ts",
     "cardano-node": "ts-node src/cardano-node.ts",
-    "test": "ts-node src/test.ts"
+    "test": "ts-node src/test.ts",
+    "generateDB": "ts-node src/database.ts"
   },
   "devDependencies": {
     "@types/node": "^20.2.3",
