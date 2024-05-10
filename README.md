@@ -3,13 +3,9 @@
 **Usage Example**
 
 - start node to kafka stream. refer [here](https://github.com/reeshavacharya/libcardano-kafka/blob/main/README.md)
-- Run:  
+- Initialize Database:  
     ```bash
-    npx prisma generate
-    ```
-    and 
-    ```bash
-    npx prisma migrate dev
+    yarn generateDB
     ```
 - Run test:
   ```bash 
